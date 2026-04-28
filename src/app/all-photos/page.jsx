@@ -2,6 +2,10 @@ import CategoryFilter from '@/Components/AllPages/HomePage/PhotosSection/Categor
 import PhotoCard from '@/Components/AllPages/HomePage/PhotosSection/PhotoCard';
 import getPhotoData from '@/lib/getPhotoData';
 import React from 'react';
+export const metadata = {
+  title: 'All Photo Page',
+  description: 'This Is Home Page',
+};
 
 const AllPhotoPage = async ({ searchParams }) => {
   const { category } = await searchParams;
