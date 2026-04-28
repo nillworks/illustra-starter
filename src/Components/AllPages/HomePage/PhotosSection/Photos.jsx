@@ -4,7 +4,6 @@ import getPhotoData from '@/lib/getPhotoData';
 
 const Photos = async () => {
   const photoData = await getPhotoData();
-  console.log(photoData);
 
   return (
     <section className="container max-w-7xl mx-auto pt-10 space-y-4">

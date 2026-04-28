@@ -39,7 +39,7 @@ const Navbar = () => {
           <ul className="flex items-center gap-3 text-sm">
             <li>
               <Link
-                href="/signup"
+                href="/auth/signup"
                 className="px-4 py-2 rounded-lg font-medium bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md hover:from-indigo-600 hover:to-purple-600 transition-all duration-300"
               >
                 SignUp
@@ -48,7 +48,7 @@ const Navbar = () => {
 
             <li>
               <Link
-                href="/signin"
+                href="/auth/signin"
                 className="px-4 py-2 rounded-lg font-medium border border-indigo-500 text-indigo-600 hover:bg-indigo-500 hover:text-white transition-all duration-300"
               >
                 SignIn
