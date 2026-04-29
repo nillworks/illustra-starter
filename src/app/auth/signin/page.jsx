@@ -14,6 +14,31 @@ import {
 export default function SignInPage() {
   const onSubmit = async e => {
     e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const signFormData = Object.fromEntries(formData.entries());
+
+    // Sign In Functionality
+    const { data, error } = await authClient.signIn.email({
+      email: signFormData.email, // required
+      password: signFormData.password, // required
+      rememberMe: true,
+      callbackURL: '/',
+    });
+
+    if (data) {
+      toast('Success ', {
+        description: 'Operation completed',
+      });
+      router.push('/');
+    }
+
+    if (error) {
+      toast('Error ', {
+        description: error.message || 'Something went wrong',
+        variant: 'destructive',
+      });
+      return;
+    }
   };
 
   return (
